@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "./configs/redux/reducers/todoSlice";
 
-const App = () => {
+const TodoApp = () => {
   const [text, setText] = useState("1st todo");
   const dispatch = useDispatch();
-  const todos = useSelector((state) => state);
+  const todos = useSelector((state) => state.todos);
 
   const handleAddTodo = (e) => {
     if (text.trim()) {
@@ -30,4 +30,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default TodoApp;

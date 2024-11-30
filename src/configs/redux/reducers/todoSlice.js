@@ -12,7 +12,8 @@ const todoSlice = createSlice({
         id: nanoid()
       })
     },
-    editTodo: (state, action) => {
+    delTodo: (state, action) => {
+        state.todos.id
     },
   },
 });
